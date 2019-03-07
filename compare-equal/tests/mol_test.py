@@ -1,11 +1,17 @@
 import chimera
-from .algorithms import CompareMol
+from algorithms.compare_equal import CompareMol
 
 # Definition of 3 variable of Molecule class wih local PDF files
 
-mol1 = chimera.openModels.open("./mol1.pdb".format(pdb_1), type="PDB")[0]
-mol2 = chimera.openModels.open("./mol2.pdb".format(pdb_1), type="PDB")[0]
-mol3 = chimera.openModels.open("./mol3.pdb".format(pdb_1), type="PDB")[0]
+mol1 = chimera.openModels.open(
+    "/home/andres/practicas/compare_equal/compare-equal/tests/mol1.pdb", type="PDB"
+)[0]
+mol2 = chimera.openModels.open(
+    "/home/andres/practicas/compare_equal/compare-equal/tests/mol2.pdb", type="PDB"
+)[0]
+mol3 = chimera.openModels.open(
+    "/home/andres/practicas/compare_equal/compare-equal/tests/mol3.pdb", type="PDB"
+)[0]
 
 out1 = CompareMol(mol1, mol2)
 out2 = CompareMol(mol1, mol3)
