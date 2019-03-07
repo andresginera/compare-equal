@@ -1,5 +1,4 @@
 # Compare Equal module
----
 
 This module for Python is a function for Chimera to compare if two molecules are equal.
 
