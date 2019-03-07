@@ -1,6 +1,8 @@
 import chimera
 from algorithms.compare_equal import ComparePdb
 
+# As the current directory is the root of the package compare_equal, the directory of the pdb files must be from this directory:
+
 out1 = ComparePdb("compare-equal/tests/mol1", "compare-equal/tests/mol2")
 out2 = ComparePdb("compare-equal/tests/mol1", "compare-equal/tests/mol3")
 out3 = ComparePdb("compare-equal/tests/mol2", "compare-equal/tests/mol3")

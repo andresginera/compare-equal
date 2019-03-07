@@ -1,3 +1,5 @@
+# I found this solution for a problem regarding the importing of local Python module from others directories.
+
 import sys
 from os.path import dirname, abspath, join, sep
 
