@@ -4,11 +4,12 @@ python:
 os:
   - linux
 before_install:
+  - chmod +x devtools/travis-ci/chimera.sh
   # Chimera:
   - devtools/travis-ci/chimera.sh
 install:
   # Install package
-  -
+  - pip install
 script:
   # Check packages
   - chimera --nogui --silent compare_equal/tests/mol_test.py
