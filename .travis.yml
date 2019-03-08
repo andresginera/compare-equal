@@ -9,7 +9,7 @@ before_install:
   - devtools/travis-ci/chimera.sh
 install:
   # Install package
-  - pip install
+  - pip install -i https://test.pypi.org/simple/ compare-equal
 script:
   # Check packages
   - $HOME/chimera/bin/chimera --nogui --silent compare_equal/tests/mol_test.py
