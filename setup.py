@@ -4,13 +4,13 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="compare-equal",
-    version="0.1",
+    name="compare_equal",
+    version="0.2",
     description="Third-party chimera module for compare molecules",
     long_description=long_description,
     author="Andres Giner Anton",
     author_email="andresgineranton@outlook.com",
-    py_modules=["compare_equal.compare"],
+    packages=setuptools.find_packages(),
     url="https://github.com/andresginera/compare-equal",
 )
 
