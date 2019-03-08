@@ -12,5 +12,5 @@ install:
   - pip install
 script:
   # Check packages
-  - chimera --nogui --silent compare_equal/tests/mol_test.py
-  - chimera --nogui --silent compare_equal/tests/pdb_test.py
+  - $HOME/chimera/bin/chimera --nogui --silent compare_equal/tests/mol_test.py
+  - $HOME/chimera/bin/chimera --nogui --silent compare_equal/tests/pdb_test.py
