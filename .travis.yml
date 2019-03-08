@@ -1,0 +1,15 @@
+language: python
+python:
+  - 2.7
+os:
+  - linux
+before_install:
+  # Chimera:
+  - devtools/travis-ci/chimera.sh
+install:
+  # Install package
+  -
+script:
+  # Check packages
+  - chimera --nogui --silent compare_equal/tests/mol_test.py
+  - chimera --nogui --silent compare_equal/tests/pdb_test.py
