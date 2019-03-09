@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, "/home/andres/practicas/root/compare_equal")
 
 import chimera
-import compare
+from compare_equal import compare
 
 # Definition of 3 variable of Molecule class wih local PDF files
 

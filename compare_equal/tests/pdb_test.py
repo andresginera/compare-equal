@@ -2,7 +2,7 @@ import sys
 
 sys.path.insert(0, "/home/andres/practicas/root/compare_equal")
 
-import compare
+from compare_equal import compare
 
 # As the current directory is the root of the package compare_equal, the directory of the pdb files must be from this directory:
 

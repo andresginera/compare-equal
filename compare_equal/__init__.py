@@ -1,1 +1,1 @@
-__name__ = "compare_equal"
+name = "compare_equal"
