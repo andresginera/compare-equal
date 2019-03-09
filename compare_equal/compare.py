@@ -3,17 +3,21 @@ import os
 import chimera
 import chimera.match as match
 
-path = os.path.dirname(os.path.abspath(__file__))
+path = os.getcwd()
 
 
 def ComparePdb(pdb_1, pdb_2):
     """
-    Recieves the name of two pdb files without extension and checks 
+    Recieves the name of two pdb files with or without extension and checks 
     if the two molecules of both pdb files are equals, in which case, 
     it will return a True value.
     """
-    mol_1 = chimera.openModels.open("{0}/{1}.pdb".format(path, pdb_1), type="PDB")[0]
-    mol_2 = chimera.openModels.open("{0}/{1}.pdb".format(path, pdb_2), type="PDB")[0]
+    if not pdb_1.endswith(".pdb"):
+        pdb_1 += ".pdb"
+    if not pdb_2.endswith(".pdb"):
+        pdb_2 += ".pdb"
+    mol_1 = chimera.openModels.open("{0}/{1}".format(path, pdb_1), type="PDB")[0]
+    mol_2 = chimera.openModels.open("{0}/{1}".format(path, pdb_2), type="PDB")[0]
     atoms_1 = mol_1.atoms
     atoms_2 = mol_2.atoms
     if mol_1.numAtoms == mol_2.numAtoms:

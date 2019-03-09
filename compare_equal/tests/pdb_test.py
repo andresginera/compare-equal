@@ -1,6 +1,6 @@
 import sys
 
-sys.path.insert(0, "/home/andres/practicas/root/compare_equal")
+sys.path.insert(0, "/home/andres/practicas/root/")
 
 from compare_equal import compare
 
