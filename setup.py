@@ -5,14 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="compare_equal",
-    version="0.5",
+    version="0.5.1",
     description="Third-party chimera module for compare molecules",
     long_description=long_description,
     author="Andres Giner Anton",
     author_email="andresgineranton@outlook.com",
-    packages=setuptools.find_packages("compare_equal"),
-    package_dir={"": "compare_equal"},
-    package_data={"tests": ["data/*.pdb"]},
+    packages=setuptools.find_packages(),
+    package_data={"": ["tests/data/*.pdb"]},
     url="https://github.com/andresginera/compare-equal",
 )
 
