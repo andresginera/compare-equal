@@ -1,7 +1,8 @@
 import os
 import sys
 
-sys.path.insert(0, "/home/andres/practicas/root/")
+# sys.path.insert(0, "/home/andres/practicas/root/")
+sys.path.append("../..")
 path = os.path.dirname(os.path.abspath(__file__))
 
 import chimera
@@ -9,9 +10,9 @@ from compare_equal import compare
 
 # Definition of 3 variable of Molecule class wih local PDF files
 
-mol1 = chimera.openModels.open(path + "/mol1.pdb", type="PDB")[0]
-mol2 = chimera.openModels.open(path + "/mol2.pdb", type="PDB")[0]
-mol3 = chimera.openModels.open(path + "/mol3.pdb", type="PDB")[0]
+mol1 = chimera.openModels.open(path + "/data/mol1.pdb", type="PDB")[0]
+mol2 = chimera.openModels.open(path + "/data/mol2.pdb", type="PDB")[0]
+mol3 = chimera.openModels.open(path + "/data/mol3.pdb", type="PDB")[0]
 
 out1 = compare.CompareMol(mol1, mol2)
 out2 = compare.CompareMol(mol1, mol3)

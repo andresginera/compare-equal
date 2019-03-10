@@ -10,7 +10,9 @@ setuptools.setup(
     long_description=long_description,
     author="Andres Giner Anton",
     author_email="andresgineranton@outlook.com",
-    packages=["compare_equal"],
+    packages=setuptools.find_packages("compare_equal"),
+    package_dir={"": "compare_equal"},
+    package_data={"tests": ["data/*.pdb"]},
     url="https://github.com/andresginera/compare-equal",
 )
 

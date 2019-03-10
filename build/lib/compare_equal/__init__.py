@@ -1,1 +1,0 @@
-name = "compare_equal"
