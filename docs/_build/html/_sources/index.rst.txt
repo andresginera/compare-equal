@@ -12,6 +12,8 @@ Welcome to the Compare-Equal's documentation.
    :maxdepth: 2
    :caption: Contents:
 
+   documentation.rst
+   license.rst
 
 
 Indices and tables
