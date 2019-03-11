@@ -1,7 +1,6 @@
 import os
 import sys
 
-# sys.path.insert(0, "/home/andres/practicas/root/")
 sys.path.append("../..")
 path = os.path.dirname(os.path.abspath(__file__))
 

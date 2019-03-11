@@ -45,3 +45,12 @@ This package, has a subpackage ``tests`` with two tests to check if both functio
 
     $ chimera --nogui --silent --script <(echo "import compare_equal.tests.mol_test")
     $ chimera --nogui --silent --script <(echo "import compare_equal.tests.pdb_test")
+
+Alternatively, you can run the tests with PyChimera in a simpler way:
+
+.. code-block:: bash
+
+    $ pychimera -m compare_equal.tests.mol_test
+    $ pychimera -m compare_equal.tests.pdb_test
+
+Both tests are expected to produce no output.

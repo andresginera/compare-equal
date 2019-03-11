@@ -20,11 +20,3 @@ of the Chimera's Molecule class or directly two PDB files.
    user_guide.rst
    developers.rst
    license.rst
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
