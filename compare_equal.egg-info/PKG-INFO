@@ -1,0 +1,27 @@
+Metadata-Version: 1.0
+Name: compare-equal
+Version: 0.5.1
+Summary: Third-party chimera module for compare molecules
+Home-page: https://github.com/andresginera/compare-equal
+Author: Andres Giner Anton
+Author-email: andresgineranton@outlook.com
+License: UNKNOWN
+Description: # Compare Equal module
+        
+        This module for Python is a function for Chimera to compare if two molecules are equal.
+        
+        You can compare **Python variable** of the Chimera's Molecule class or directly two **PDB files**. 
+        
+        ## Documentation
+        
+        Here are the documention section.
+        
+        ## License
+        
+        Here, there is the license.
+        
+        ## Citation
+        
+        Citation section. 
+        
+Platform: UNKNOWN
