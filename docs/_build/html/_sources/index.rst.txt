@@ -8,11 +8,17 @@ Compare Equal Module
 
 Welcome to the Compare-Equal's documentation.
 
+Compare Equal is a package of two function for Chimera to compare if 
+two molecules are equal. You can compare either two Python variables 
+of the Chimera's Molecule class or directly two PDB files.
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
-   documentation.rst
+   first_steps.rst
+   user_guide.rst
+   developers.rst
    license.rst
 
 

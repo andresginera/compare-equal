@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentation for developers &mdash; compare_equal  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="User Guide" href="user_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> compare_equal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="first_steps.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation for developers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comparison-of-two-pdb-files">Comparison of two PDB files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparison-of-two-python-variables">Comparison of two Python variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-for-compare-pdb">Test for Compare.Pdb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-for-compare-mol">Test for Compare.Mol</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html#contact">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">compare_equal</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Documentation for developers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/developers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentation-for-developers">
+<h1>Documentation for developers<a class="headerlink" href="#documentation-for-developers" title="Permalink to this headline">¶</a></h1>
+<p>In this section you have the source code for each of the function and tests.</p>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="comparison-of-two-pdb-files">
+<h3>Comparison of two PDB files<a class="headerlink" href="#comparison-of-two-pdb-files" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ComparePdb</span><span class="p">(</span><span class="n">pdb_1</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Recieves the name of two pdb files with or without extension and checks </span>
+<span class="sd">    if the two molecules of both pdb files are equals, in which case, </span>
+<span class="sd">    it will return a True value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pdb_1</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pdb&quot;</span><span class="p">):</span>
+        <span class="n">pdb_1</span> <span class="o">+=</span> <span class="s2">&quot;.pdb&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pdb_2</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pdb&quot;</span><span class="p">):</span>
+        <span class="n">pdb_2</span> <span class="o">+=</span> <span class="s2">&quot;.pdb&quot;</span>
+    <span class="n">mol_1</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pdb_1</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">mol_2</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">atoms_1</span> <span class="o">=</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">atoms</span>
+    <span class="n">atoms_2</span> <span class="o">=</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">atoms</span>
+    <span class="k">if</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">numAtoms</span> <span class="o">==</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">:</span>
+        <span class="n">rmsd</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;{0:.3f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">atoms_1</span><span class="p">,</span> <span class="n">atoms_2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">rmsd</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comparison-of-two-python-variables">
+<h3>Comparison of two Python variables<a class="headerlink" href="#comparison-of-two-python-variables" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CompareMol</span><span class="p">(</span><span class="n">mol_1</span><span class="p">,</span> <span class="n">mol_2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Recieves two &#39;chimera.Molecule&#39; objects and checks</span>
+<span class="sd">    if both are equals, in which case, it will return a True value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">type</span><span class="p">(</span><span class="n">mol_1</span><span class="p">)</span> <span class="o">==</span> <span class="n">chimera</span><span class="o">.</span><span class="n">Molecule</span>
+    <span class="p">),</span> <span class="s2">&quot;First variable is not a &#39;chimera.Molecule&#39; object&quot;</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">type</span><span class="p">(</span><span class="n">mol_2</span><span class="p">)</span> <span class="o">==</span> <span class="n">chimera</span><span class="o">.</span><span class="n">Molecule</span>
+    <span class="p">),</span> <span class="s2">&quot;Second variable is not a &#39;chimera.Molecule&#39; object&quot;</span>
+    <span class="n">atoms_1</span> <span class="o">=</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">atoms</span>
+    <span class="n">atoms_2</span> <span class="o">=</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">atoms</span>
+    <span class="k">if</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">numAtoms</span> <span class="o">==</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">:</span>
+        <span class="n">rmsd</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;{0:.3f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">atoms_1</span><span class="p">,</span> <span class="n">atoms_2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">rmsd</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="test-for-compare-pdb">
+<h3>Test for Compare.Pdb<a class="headerlink" href="#test-for-compare-pdb" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../..&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">compare_equal</span> <span class="k">import</span> <span class="n">compare</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+
+<span class="n">out1</span> <span class="o">=</span> <span class="n">compare</span><span class="o">.</span><span class="n">ComparePdb</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;data/mol1&quot;</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;data/mol2&quot;</span><span class="p">)</span>
+<span class="n">out2</span> <span class="o">=</span> <span class="n">compare</span><span class="o">.</span><span class="n">ComparePdb</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;data/mol1&quot;</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;data/mol3&quot;</span><span class="p">)</span>
+<span class="n">out3</span> <span class="o">=</span> <span class="n">compare</span><span class="o">.</span><span class="n">ComparePdb</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;data/mol2&quot;</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;data/mol3&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">out1</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error in first comparison: mol1 and mol2&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">out2</span> <span class="o">!=</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error in second comparison: mol1 and mol3&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">out3</span> <span class="o">!=</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error in third comparison: mol2 and mol3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-for-compare-mol">
+<h3>Test for Compare.Mol<a class="headerlink" href="#test-for-compare-mol" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># sys.path.insert(0, &quot;/home/andres/practicas/root/&quot;)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../..&quot;</span><span class="p">)</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+
+<span class="kn">import</span> <span class="nn">chimera</span>
+<span class="kn">from</span> <span class="nn">compare_equal</span> <span class="k">import</span> <span class="n">compare</span>
+
+<span class="c1"># Definition of 3 variable of Molecule class wih local PDF files</span>
+
+<span class="n">mol1</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;/data/mol1.pdb&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mol2</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;/data/mol2.pdb&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mol3</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;/data/mol3.pdb&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">out1</span> <span class="o">=</span> <span class="n">compare</span><span class="o">.</span><span class="n">CompareMol</span><span class="p">(</span><span class="n">mol1</span><span class="p">,</span> <span class="n">mol2</span><span class="p">)</span>
+<span class="n">out2</span> <span class="o">=</span> <span class="n">compare</span><span class="o">.</span><span class="n">CompareMol</span><span class="p">(</span><span class="n">mol1</span><span class="p">,</span> <span class="n">mol3</span><span class="p">)</span>
+<span class="n">out3</span> <span class="o">=</span> <span class="n">compare</span><span class="o">.</span><span class="n">CompareMol</span><span class="p">(</span><span class="n">mol2</span><span class="p">,</span> <span class="n">mol3</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">out1</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error in first comparison: mol1 and mol2&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">out2</span> <span class="o">!=</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error in second comparison: mol1 and mol3&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">out3</span> <span class="o">!=</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error in third comparison: mol2 and mol3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="user_guide.html" class="btn btn-neutral float-left" title="User Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Andres Giner Anton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
