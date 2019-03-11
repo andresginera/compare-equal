@@ -6,7 +6,7 @@ You can compare either two **Python variables** of the Chimera's Molecule class 
 
 ## Documentation
 
-The documentation of the package is stored in the docs/ directory and also it is available as HTML in `this website <https://compare-equal.readthedocs.io/en/latest/>`_.
+The documentation of the package is stored in the docs/ directory and also it is available as HTML in [in this website](https://compare-equal.readthedocs.io/en/latest/).
 
 ## License
 
