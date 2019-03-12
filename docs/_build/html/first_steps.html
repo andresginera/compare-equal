@@ -178,11 +178,27 @@
 <div class="section" id="how-to-use-it">
 <h2>How to use it<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline">¶</a></h2>
 <p>Compare-Equal package is intended to be used in Python scripts that are going to be run inside of Chimera or in the command line with the <code class="docutils literal notranslate"><span class="pre">chimera</span> <span class="pre">--nogui</span></code> command.</p>
+<p>The functions are stored in the module <code class="docutils literal notranslate"><span class="pre">compare</span></code> inside of the <code class="docutils literal notranslate"><span class="pre">compare_equal</span></code> package. However, you can call these function importing the package without the module:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">chimera</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_1</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;4uft&quot;</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_2</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;4uft&quot;</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="go"># Without importing the module explicitly</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">compare_equal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">compare_equal</span><span class="o">.</span><span class="n">CompareMol</span><span class="p">(</span><span class="n">test_1</span><span class="p">,</span><span class="n">test_2</span><span class="p">)</span>
+<span class="go">True</span>
+
+<span class="go"># Importing the module inside the package explicitly</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">compare_equal</span> <span class="kn">import</span> <span class="n">compare</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">compare</span><span class="o">.</span><span class="n">CompareMol</span><span class="p">(</span><span class="n">test_1</span><span class="p">,</span><span class="n">test_2</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
 <p>Although, you can use it also interactivily with Chimera as an interpreter, you can also import the package within the Interpreter of <a class="reference external" href="https://pychimera.readthedocs.io/en/latest/">PyChimera</a>.</p>
 </div>
 <div class="section" id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
-<p>This package, has a subpackage <code class="docutils literal notranslate"><span class="pre">tests</span></code> with two tests to check if both functions run as intended. You can run both tests with Chimera in the command line:</p>
+<p>This package, has also a subpackage <code class="docutils literal notranslate"><span class="pre">tests</span></code> with two tests to check if both functions run as intended. You can run both tests with Chimera in the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ chimera --nogui --silent --script &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">&quot;import compare_equal.tests.mol_test&quot;</span><span class="o">)</span>
 $ chimera --nogui --silent --script &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">&quot;import compare_equal.tests.pdb_test&quot;</span><span class="o">)</span>
 </pre></div>

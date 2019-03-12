@@ -33,13 +33,31 @@ How to use it
 
 Compare-Equal package is intended to be used in Python scripts that are going to be run inside of Chimera or in the command line with the ``chimera --nogui`` command. 
 
+The functions are stored in the module ``compare`` inside of the ``compare_equal`` package. However, you can call these function importing the package without the module:
+
+.. code-block:: python
+
+    >>> import chimera
+    >>> test_1 = chimera.openModels.open("4uft",type="PDB")[0]
+    >>> test_2 = chimera.openModels.open("4uft",type="PDB")[0]
+
+    # Without importing the module explicitly
+    >>> import compare_equal
+    >>> compare_equal.CompareMol(test_1,test_2)
+    True
+
+    # Importing the module inside the package explicitly
+    >>> from compare_equal import compare
+    >>> compare.CompareMol(test_1,test_2)
+    True
+
 Although, you can use it also interactivily with Chimera as an interpreter, you can also import the package within the Interpreter of `PyChimera <https://pychimera.readthedocs.io/en/latest/>`_.
 
 -----
 Tests
 -----
 
-This package, has a subpackage ``tests`` with two tests to check if both functions run as intended. You can run both tests with Chimera in the command line:
+This package, has also a subpackage ``tests`` with two tests to check if both functions run as intended. You can run both tests with Chimera in the command line:
 
 .. code-block:: bash
 
