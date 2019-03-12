@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/andresginera/compare-equal.svg?branch=master)](https://travis-ci.org/andresginera/compare-equal)
+[![Documentation Status](https://readthedocs.org/projects/compare-equal/badge/?version=latest)](https://compare-equal.readthedocs.io/en/latest/?badge=latest)
+
 # Compare Equal module
 
 This module for Python is a package for Chimera to compare if two molecules are equal.
