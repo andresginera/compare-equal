@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/andresginera/compare-equal.svg?branch=master)](https://travis-ci.org/andresginera/compare-equal)
 [![Documentation Status](https://readthedocs.org/projects/compare-equal/badge/?version=latest)](https://compare-equal.readthedocs.io/en/latest/?badge=latest)
+[![Python 2.7.15](https://img.shields.io/badge/python-2.7.15-blue.svg)](https://www.python.org/downloads/release/python-2715)
 
-# Compare Equal module
+# Compare Equal package
 
 This module for Python is a package for Chimera to compare if two molecules are equal.
 
@@ -13,7 +14,7 @@ The documentation of the package is stored in the docs/ directory and also it is
 
 ## License
 
-You can see the license in detal in the [LICENSE](./LICENSE) file.
+You can see the license in detail in the [LICENSE](./LICENSE) file.
 
 ## Citation
 

@@ -21,7 +21,7 @@
 
 project = "compare_equal"
 copyright = "2019, Andres Giner Anton"
-author = "Andres Giner Anton"
+author = "Andrés Giner Antón"
 
 # The short X.Y version
 version = ""
