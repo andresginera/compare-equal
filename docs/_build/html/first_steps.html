@@ -168,7 +168,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -i https://test.pypi.org/simple/ compare-equal
 </pre></div>
 </div>
-<p>After the installation you need to add the path where the package is installed (<code class="docutils literal notranslate"><span class="pre">$PATH</span></code>)
+<p>After the installation you need to add the path where the package is installed (<code class="docutils literal notranslate"><span class="pre">$PATH_TO_LIB</span></code>)
 into the Chimera third-party plugin location library in Preferences. With these commands you
 can obtain the path and save it in Chimera Preferences:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nv">PATH_TO_LIB</span><span class="o">=</span><span class="k">$(</span>python -c <span class="s2">&quot;from distutils.sysconfig import get_python_lib; print(get_python_lib())&quot;</span><span class="k">)</span>

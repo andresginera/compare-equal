@@ -17,7 +17,7 @@ Install ``compare_equal`` via the package installer ``pip`` for Python 2.7:
 
     $ pip install -i https://test.pypi.org/simple/ compare-equal
 
-After the installation you need to add the path where the package is installed (``$PATH``) 
+After the installation you need to add the path where the package is installed (``$PATH_TO_LIB``) 
 into the Chimera third-party plugin location library in Preferences. With these commands you
 can obtain the path and save it in Chimera Preferences:
 

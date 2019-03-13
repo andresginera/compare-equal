@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="compare_equal",
-    version="0.7",
+    version="0.7.5",
     description="Third-party chimera module for compare molecules",
     long_description=long_description,
     author="Andres Giner Anton",

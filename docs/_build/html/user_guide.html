@@ -157,8 +157,8 @@
   <div class="section" id="user-guide">
 <h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
 <p>Compare Equal is a package of two function and a subpackage of tests for each function. As the package uses Chimera classes and its attributes, it is essential to have it installed. The package imports the Chimera module:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">chimera</span>
-<span class="kn">import</span> <span class="nn">chimera.match</span> <span class="kn">as</span> <span class="nn">match</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Main module Compare composed of the two functions for comparison of two molecules.</span>
 </pre></div>
 </div>
 <div class="section" id="functions">
@@ -168,8 +168,8 @@ Both function return a boolean value (True or False) depending if both molecules
 <dl class="function">
 <dt id="ComparePdb">
 <code class="descname">ComparePdb</code><span class="sig-paren">(</span><em>pdb_1</em>, <em>pdb_2</em><span class="sig-paren">)</span><a class="headerlink" href="#ComparePdb" title="Permalink to this definition">¶</a></dt>
-<dd><p>Recieves the name of two pdb files with or without extension and checks
-if the two molecules of both pdb files are equals, in which case,
+<dd><p>Recieves the name of two PDB files with or without extension and checks
+if the two molecules of both PDB files are equals, in which case,
 it will return a <code class="docutils literal notranslate"><span class="pre">True</span></code> value.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -184,7 +184,7 @@ it will return a <code class="docutils literal notranslate"><span class="pre">Tr
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A True or False value.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">boolean</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Boolean.</p>
 </td>
 </tr>
 </tbody>
@@ -201,18 +201,18 @@ if both are equals, in which case, it will return a <code class="docutils litera
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>mol_1</strong> (<em>'chimera.Molecule' object</em>) – A Python variable to compare with <em>mol2</em>.</li>
-<li><strong>mol_2</strong> (<em>'chimera.Molecule' object</em>) – A Python variable to compare with <em>mol1</em>.</li>
+<li><strong>mol_1</strong> (<em>'chimera.Molecule' object</em>) – A Python variable to compare with <em>mol_2</em>.</li>
+<li><strong>mol_2</strong> (<em>'chimera.Molecule' object</em>) – A Python variable to compare with <em>mol_1</em>.</li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A True or False value.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">boolean</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Boolean.</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>AssertionError</strong> – if one of the argument is not a Chimera Molecule object</p>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>AssertionError</strong> – if one of the argument is not a Chimera Molecule object.</p>
 </td>
 </tr>
 </tbody>

@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+
+"""
+Test for the function compare_equal.compare.ComparePdb
+
+Returns no output if the package was correctly installed.
+"""
+
 import sys
 
 sys.path.append("../..")

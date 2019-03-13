@@ -17,24 +17,24 @@ Both function return a boolean value (True or False) depending if both molecules
 
 .. py:function:: ComparePdb(pdb_1,pdb_2)
 
-    Recieves the name of two pdb files with or without extension and checks 
-    if the two molecules of both pdb files are equals, in which case, 
+    Recieves the name of two PDB files with or without extension and checks 
+    if the two molecules of both PDB files are equals, in which case, 
     it will return a ``True`` value.
 
     :param str pdb_1: The path from the current working directory to the first PDB file to compare.
     :param str pdb_2: The path from the current working directory to the second PDB file to compare.
     :return: A True or False value.
-    :rtype: boolean
+    :rtype: Boolean.
 
 .. py:function:: CompareMol(mol_1,mol_2)
 
     Recieves two ``'chimera.Molecule' objects`` and checks
     if both are equals, in which case, it will return a ``True`` value.
 
-    :param mol_1: A Python variable to compare with *mol2*.
-    :param mol_2: A Python variable to compare with *mol1*.
+    :param mol_1: A Python variable to compare with *mol_2*.
+    :param mol_2: A Python variable to compare with *mol_1*.
     :type mol_1: 'chimera.Molecule' object
     :type mol_2: 'chimera.Molecule' object
     :return: A True or False value.
-    :rtype: boolean
-    :raises AssertionError: if one of the argument is not a Chimera Molecule object
+    :rtype: Boolean.
+    :raises AssertionError: if one of the argument is not a Chimera Molecule object.
