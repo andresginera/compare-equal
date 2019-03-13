@@ -8,9 +8,16 @@ path = os.getcwd()
 
 def ComparePdb(pdb_1, pdb_2):
     """
-    Recieves the name of two pdb files with or without extension and checks 
-    if the two molecules of both pdb files are equals, in which case, 
+    Recieves the name of two PDB files with or without extension and checks 
+    if the two molecules of both PDB files are equals, in which case, 
     it will return a True value.
+
+    :param pdb_1: The path from the current working directory to the first PDB file to compare.
+    :type pdb_1: str
+    :param pdb_2: The path from the current working directory to the second PDB file to compare.
+    :type pdb_2: str
+    :returns: A True or False value depending if both PDB are equal or not.
+    :rtype: boolean
     """
     if not pdb_1.endswith(".pdb"):
         pdb_1 += ".pdb"
@@ -34,6 +41,12 @@ def CompareMol(mol_1, mol_2):
     """
     Recieves two 'chimera.Molecule' objects and checks
     if both are equals, in which case, it will return a True value.
+
+    :param mol_1: A :class:`chimera.Molecule` to compare with *mol2*.
+    :param mol_2: A Python variable to compare with *mol1*.
+    :type mol_2: :class:`chimera.Molecule`
+    :returns: A True or False value depending if both molecules are equal or not.
+    :rtype: boolean
     """
     assert (
         type(mol_1) == chimera.Molecule
