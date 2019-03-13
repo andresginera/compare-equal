@@ -178,9 +178,8 @@
 
 <span class="k">def</span> <span class="nf">ComparePdb</span><span class="p">(</span><span class="n">pdb_1</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Recieves the name (or path) of two PDB files and checks </span>
-<span class="sd">    if the two molecules of both PDB files are equals, in which case, </span>
-<span class="sd">    it will return a True value.</span>
+<span class="sd">    Recieves the name (or path) of two PDB files and checks if the two molecules of both PDB files are equals,</span>
+<span class="sd">    in which case, it will return a True value.</span>
 
 
 <span class="sd">    Parameters:</span>
@@ -192,13 +191,13 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">pdb_1</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pdb&quot;</span><span class="p">):</span>
         <span class="n">pdb_1</span> <span class="o">+=</span> <span class="s2">&quot;.pdb&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pdb_2</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pdb&quot;</span><span class="p">):</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="comparison-of-two-python-variables">
 <h3>Comparison of two Python variables<a class="headerlink" href="#comparison-of-two-python-variables" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">mol_1</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pdb_1</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">mol_2</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">mol_2</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">atoms_1</span> <span class="o">=</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">atoms</span>
     <span class="n">atoms_2</span> <span class="o">=</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">atoms</span>
     <span class="k">if</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">numAtoms</span> <span class="o">==</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">:</span>
@@ -213,11 +212,12 @@
 
 <span class="k">def</span> <span class="nf">CompareMol</span><span class="p">(</span><span class="n">mol_1</span><span class="p">,</span> <span class="n">mol_2</span><span class="p">):</span>
     <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    Recieves two &#39;chimera.Molecule&#39; objects and checks</span>
-<span class="s2">    if both are equals, in which case, it will return a True value.</span>
+<span class="s2">    Recieves two &#39;chimera.Molecule&#39; objects and checks if both are equals, in which case, it will return a True value.</span>
 
-<span class="s2">    Parameter:</span>
+
+<span class="s2">    Parameters:</span>
 <span class="s2">        - mol_1 (&#39;chimera.Molecule&#39; object): A Python variable to compare with *mol_2*.</span>
+<span class="s2">        - mol_2 (&#39;chimera.Molecule&#39; object): A Python variable to compare with *mol_1*.</span>
 </pre></div>
 </div>
 </div>
@@ -226,7 +226,15 @@
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="test-for-compare-pdb">
 <h3>Test for Compare.Pdb<a class="headerlink" href="#test-for-compare-pdb" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Test for the function compare_equal.compare.ComparePdb</span>
+
+<span class="sd">Returns no output if the package was correctly installed.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../..&quot;</span><span class="p">)</span>
 
@@ -247,7 +255,15 @@
 </div>
 <div class="section" id="test-for-compare-mol">
 <h3>Test for Compare.Mol<a class="headerlink" href="#test-for-compare-mol" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Test for the function compare_equal.compare.CompareMol</span>
+
+<span class="sd">Returns no output if the package was correctly installed.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../..&quot;</span><span class="p">)</span>

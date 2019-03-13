@@ -1,6 +1,8 @@
 First steps
 =====================
 
+.. _install_chimera:
+
 ------------------
 How to install
 ------------------

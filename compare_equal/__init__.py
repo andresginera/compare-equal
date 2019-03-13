@@ -10,11 +10,9 @@ objects. These two function can be imported directly with the package compare_eq
 Moreover, the package includes a subpackage for check the properly running of the two function, the `compare_equal.tests`. 
 """
 
-__author__ = "Andrés Giner Antón"
+__author__ = "Andres Giner Anton"
 __url__ = "https://github.com/andresginera/compare-equal"
 __title__ = "Compare Equal"
-__description__ = (
-    "A test package for practising Git software and Python package development."
-)
+
 __all__ = ["ComparePdb", "CompareMol"]
 from compare import *

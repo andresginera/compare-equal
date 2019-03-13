@@ -1,11 +1,9 @@
 User Guide
 ========================
 
-Compare Equal is a package of two function and a subpackage of tests for each function. As the package uses Chimera classes and its attributes, it is essential to have it installed. The package imports the Chimera module:
-
-.. literalinclude:: ../compare_equal/compare.py
-    :language: python
-    :lines: 3-4
+Compare Equal is a package of two function and a subpackage of tests for each function. 
+As the package uses Chimera classes and its attributes, it is essential to have it installed. 
+See how to install it in the section: :ref:`install_chimera`.
 
 ------------
 Functions
@@ -37,4 +35,4 @@ Both function return a boolean value (True or False) depending if both molecules
     :type mol_2: 'chimera.Molecule' object
     :return: A True or False value.
     :rtype: Boolean.
-    :raises AssertionError: if one of the argument is not a Chimera Molecule object.
+    :raises AssertionError: if one of the arguments is not a Chimera Molecule object.
