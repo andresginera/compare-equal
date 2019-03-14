@@ -170,13 +170,7 @@
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="comparison-of-two-pdb-files">
 <h3>Comparison of two PDB files<a class="headerlink" href="#comparison-of-two-pdb-files" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">chimera</span>
-<span class="kn">import</span> <span class="nn">chimera.match</span> <span class="kn">as</span> <span class="nn">match</span>
-
-<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">ComparePdb</span><span class="p">(</span><span class="n">pdb_1</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ComparePdb</span><span class="p">(</span><span class="n">pdb_1</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Recieves the name (or path) of two PDB files and checks if the two molecules of both PDB files are equals,</span>
 <span class="sd">    in which case, it will return a True value.</span>
@@ -192,12 +186,9 @@
     <span class="k">if</span> <span class="ow">not</span> <span class="n">pdb_1</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pdb&quot;</span><span class="p">):</span>
         <span class="n">pdb_1</span> <span class="o">+=</span> <span class="s2">&quot;.pdb&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">pdb_2</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pdb&quot;</span><span class="p">):</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="comparison-of-two-python-variables">
-<h3>Comparison of two Python variables<a class="headerlink" href="#comparison-of-two-python-variables" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">mol_2</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">pdb_2</span> <span class="o">+=</span> <span class="s2">&quot;.pdb&quot;</span>
+    <span class="n">mol_1</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pdb_1</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">mol_2</span> <span class="o">=</span> <span class="n">chimera</span><span class="o">.</span><span class="n">openModels</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PDB&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">atoms_1</span> <span class="o">=</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">atoms</span>
     <span class="n">atoms_2</span> <span class="o">=</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">atoms</span>
     <span class="k">if</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">numAtoms</span> <span class="o">==</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">:</span>
@@ -208,16 +199,42 @@
             <span class="k">return</span> <span class="bp">False</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comparison-of-two-python-variables">
+<h3>Comparison of two Python variables<a class="headerlink" href="#comparison-of-two-python-variables" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CompareMol</span><span class="p">(</span><span class="n">mol_1</span><span class="p">,</span> <span class="n">mol_2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Recieves two &#39;chimera.Molecule&#39; objects and checks if both are equals, in which case, it will return a True value.</span>
 
 
-<span class="k">def</span> <span class="nf">CompareMol</span><span class="p">(</span><span class="n">mol_1</span><span class="p">,</span> <span class="n">mol_2</span><span class="p">):</span>
-    <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    Recieves two &#39;chimera.Molecule&#39; objects and checks if both are equals, in which case, it will return a True value.</span>
-
-
-<span class="s2">    Parameters:</span>
-<span class="s2">        - mol_1 (&#39;chimera.Molecule&#39; object): A Python variable to compare with *mol_2*.</span>
-<span class="s2">        - mol_2 (&#39;chimera.Molecule&#39; object): A Python variable to compare with *mol_1*.</span>
+<span class="sd">    Parameters:</span>
+<span class="sd">        - mol_1 (&#39;chimera.Molecule&#39; object): A Python variable to compare with *mol_2*.</span>
+<span class="sd">        - mol_2 (&#39;chimera.Molecule&#39; object): A Python variable to compare with *mol_1*.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        A True or False value depending if both molecules are equal or not (Boolean). </span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        - AssertionError if one of the arguments is not a Chimera Molecule object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">type</span><span class="p">(</span><span class="n">mol_1</span><span class="p">)</span> <span class="o">==</span> <span class="n">chimera</span><span class="o">.</span><span class="n">Molecule</span>
+    <span class="p">),</span> <span class="s2">&quot;First variable is not a &#39;chimera.Molecule&#39; object&quot;</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">type</span><span class="p">(</span><span class="n">mol_2</span><span class="p">)</span> <span class="o">==</span> <span class="n">chimera</span><span class="o">.</span><span class="n">Molecule</span>
+    <span class="p">),</span> <span class="s2">&quot;Second variable is not a &#39;chimera.Molecule&#39; object&quot;</span>
+    <span class="n">atoms_1</span> <span class="o">=</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">atoms</span>
+    <span class="n">atoms_2</span> <span class="o">=</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">atoms</span>
+    <span class="k">if</span> <span class="n">mol_1</span><span class="o">.</span><span class="n">numAtoms</span> <span class="o">==</span> <span class="n">mol_2</span><span class="o">.</span><span class="n">numAtoms</span><span class="p">:</span>
+        <span class="n">rmsd</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;{0:.3f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">atoms_1</span><span class="p">,</span> <span class="n">atoms_2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">rmsd</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
 </pre></div>
 </div>
 </div>

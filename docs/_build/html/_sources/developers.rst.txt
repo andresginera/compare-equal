@@ -12,14 +12,14 @@ Comparison of two PDB files
 
 .. literalinclude:: ../compare_equal/compare.py
     :language: python
-    :lines: 9-30
+    :lines: 15-43
 
 Comparison of two Python variables
 ***********************************
 
 .. literalinclude:: ../compare_equal/compare.py
     :language: python
-    :lines: 33-53
+    :lines: 46-76
 
 ---------------
 Tests
