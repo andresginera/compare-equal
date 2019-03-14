@@ -172,17 +172,20 @@
 <h3>Comparison of two PDB files<a class="headerlink" href="#comparison-of-two-pdb-files" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ComparePdb</span><span class="p">(</span><span class="n">pdb_1</span><span class="p">,</span> <span class="n">pdb_2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Recieves the name (or path) of two PDB files and checks if the two molecules of both PDB files are equals,</span>
-<span class="sd">    in which case, it will return a True value.</span>
+<span class="sd">    Recieves the name (or path) of two PDB files and checks if the two molecules of both </span>
+<span class="sd">    PDB files are equals, in which case, it will return a True value.</span>
 
 
 <span class="sd">    Parameters:</span>
-<span class="sd">        - pdb_1 (str): The path from the current working directory to the first PDB file to compare.</span>
-<span class="sd">        - pdb_2 (str): The path from the current working directory to the second PDB file to compare.</span>
+<span class="sd">        - pdb_1 (str): The path from the current working directory to the first PDB file </span>
+<span class="sd">                       to compare.</span>
+<span class="sd">        - pdb_2 (str): The path from the current working directory to the second PDB file</span>
+<span class="sd">                       to compare.</span>
 <span class="sd">    </span>
 <span class="sd">    Returns:</span>
 <span class="sd">        A True or False value depending if both PDB are equal or not (Boolean).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">pdb_1</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pdb&quot;</span><span class="p">):</span>
         <span class="n">pdb_1</span> <span class="o">+=</span> <span class="s2">&quot;.pdb&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">pdb_2</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pdb&quot;</span><span class="p">):</span>
@@ -206,7 +209,8 @@
 <h3>Comparison of two Python variables<a class="headerlink" href="#comparison-of-two-python-variables" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CompareMol</span><span class="p">(</span><span class="n">mol_1</span><span class="p">,</span> <span class="n">mol_2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Recieves two &#39;chimera.Molecule&#39; objects and checks if both are equals, in which case, it will return a True value.</span>
+<span class="sd">    Recieves two &#39;chimera.Molecule&#39; objects and checks if both are equals, in which case,</span>
+<span class="sd">    it will return a True value.</span>
 
 
 <span class="sd">    Parameters:</span>

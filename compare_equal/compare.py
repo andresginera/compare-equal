@@ -9,22 +9,23 @@ import os
 import chimera
 import chimera.match as match
 
-path = os.getcwd()
-
 
 def ComparePdb(pdb_1, pdb_2):
     """
-    Recieves the name (or path) of two PDB files and checks if the two molecules of both PDB files are equals,
-    in which case, it will return a True value.
+    Recieves the name (or path) of two PDB files and checks if the two molecules of both 
+    PDB files are equals, in which case, it will return a True value.
 
 
     Parameters:
-        - pdb_1 (str): The path from the current working directory to the first PDB file to compare.
-        - pdb_2 (str): The path from the current working directory to the second PDB file to compare.
+        - pdb_1 (str): The path from the current working directory to the first PDB file 
+                       to compare.
+        - pdb_2 (str): The path from the current working directory to the second PDB file
+                       to compare.
     
     Returns:
         A True or False value depending if both PDB are equal or not (Boolean).
     """
+    path = os.getcwd()
     if not pdb_1.endswith(".pdb"):
         pdb_1 += ".pdb"
     if not pdb_2.endswith(".pdb"):
@@ -45,7 +46,8 @@ def ComparePdb(pdb_1, pdb_2):
 
 def CompareMol(mol_1, mol_2):
     """
-    Recieves two 'chimera.Molecule' objects and checks if both are equals, in which case, it will return a True value.
+    Recieves two 'chimera.Molecule' objects and checks if both are equals, in which case,
+    it will return a True value.
 
 
     Parameters:
