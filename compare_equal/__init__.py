@@ -14,5 +14,5 @@ __author__ = "Andres Giner Anton"
 __url__ = "https://github.com/andresginera/compare-equal"
 __title__ = "Compare Equal"
 
-__all__ = ["ComparePdb", "CompareMol"]
+__all__ = ["compare_pdb", "compare_mol"]
 from compare import *

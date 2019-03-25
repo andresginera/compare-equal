@@ -9,8 +9,8 @@ Compare Equal Module
 Welcome to the Compare-Equal's documentation.
 
 Compare Equal is a package of two functions for `UCSF Chimera <https://www.cgl.ucsf.edu/chimera/>`_
-to compare if two molecules are equal. You can compare either two Python variables 
-of the Chimera's Molecule class or directly two PDB files.
+to compare if two molecules are equal. You can compare either two Python
+variables of the Chimera's Molecule class or directly two PDB files.
 
 ---------------
 
