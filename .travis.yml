@@ -16,7 +16,11 @@ install:
   - conda activate
   - $HOME/miniconda/bin/conda config --set always_yes yes
   - $HOME/miniconda/bin/conda install -c insilichem pychimera
-  - whereis pychimera
+  - conda install -q -n base conda conda-build
+  # Show conda info for debugging
+  - conda info -a
+  - conda list
+  - env | sort
   # Install package
   - pip install -i https://test.pypi.org/simple/ compare-equal
 script:
