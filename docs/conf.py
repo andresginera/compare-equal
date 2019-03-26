@@ -30,6 +30,7 @@ MOCK_MODULES = ["chimera"]
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 sys.path.insert(0, os.path.abspath(".."))
+sys.path.insert(0, os.path.abspath("../compare_equal"))
 
 import compare_equal
 
@@ -80,7 +81,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "_templates"]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
@@ -156,8 +157,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "compare_equal",
-              "compare_equal Documentation", [author], 1)]
+man_pages = [(master_doc, "compare_equal", "compare_equal Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------

@@ -29,9 +29,4 @@ Tests
 Test for Compare.Pdb
 ********************
 
-.. literalinclude:: ../tests/pdb_test.py
-
-Test for Compare.Mol
-********************
-
-.. literalinclude:: ../tests/mol_test.py
+.. literalinclude:: ../tests/test_class.py
