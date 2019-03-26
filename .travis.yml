@@ -5,13 +5,16 @@ os:
   - linux
 before_install:
   - chmod +x devtools/travis-ci/chimera.sh
+  - chmod +x devtools/travis-ci/miniconda.sh
   # Chimera:
   - devtools/travis-ci/chimera.sh
-  # Pychimera:
-  - conda install -c pychimera
+  # Miniconda:
+  - devtools/travis-ci/miniconda.sh
 install:
+  # Install Pychimera
+  - conda install -c insilichem pychimera
   # Install package
   - pip install -i https://test.pypi.org/simple/ compare-equal
 script:
   # Check package
-  - $pytest -s
+  - pytest -s
