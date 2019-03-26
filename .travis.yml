@@ -7,10 +7,11 @@ before_install:
   - chmod +x devtools/travis-ci/chimera.sh
   # Chimera:
   - devtools/travis-ci/chimera.sh
+  # Pychimera:
+  - conda install -c pychimera
 install:
   # Install package
   - pip install -i https://test.pypi.org/simple/ compare-equal
 script:
-  # Check packages
-  - $HOME/chimera/bin/chimera --nogui --silent tests/mol_test.py
-  - $HOME/chimera/bin/chimera --nogui --silent tests/pdb_test.py
+  # Check package
+  - $pytest -s
