@@ -1,7 +1,7 @@
 import sys
 import os
 
-sys.path.insert(0, "$HOME/miniconda/lib/python2.7/site-packages/")
+sys.path.insert(0, "/home/travis/miniconda/lib/python2.7/site-packages")
 
 # ESTO COMO HACERLO BIEN PARA NO CAMBIARLO PARA TRAVIS
 
