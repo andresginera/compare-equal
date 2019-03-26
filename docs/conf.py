@@ -15,7 +15,19 @@
 
 import os
 import sys
-import chimera
+from mock import MagicMock
+
+
+class Mock(MagicMock):
+    def __getattr__(cls, name):
+        if name in ("__file__", "__path__"):
+            return "."
+        return super(MagicMock, cls).__getattr__(name)
+
+
+MOCK_MODULES = ["chimera"]
+
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 sys.path.insert(0, os.path.abspath(".."))
 
@@ -43,7 +55,8 @@ release = ""
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.napoleon"]
-autosummary_generate = True
+napoleon_numpy_docstring = True
+napoleon_use_param = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -143,7 +156,8 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "compare_equal", "compare_equal Documentation", [author], 1)]
+man_pages = [(master_doc, "compare_equal",
+              "compare_equal Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -180,4 +194,3 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ["search.html"]
-

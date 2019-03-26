@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 
 """
-Compare Equal is a package composed of two functions for for comparison two molecules and checks if they are the same molecule.
+Compare Equal is a package composed of two functions for comparison two molecules and checks 
+if they are the same molecule. The package uses Chimera classes and its attributes, it is 
+essential to have it installed. See how to install it in the section: :ref:`install_chimera`.
 
-The main module is `compare_equal.compare` which contains the two main function: `compare_equal.compare.ComparePdb`, 
-for comparing the molecules inside of two PDB files, and `compare_equal.compare.CompareMol, for comparing two 'chimera.Molecule' 
-objects. These two function can be imported directly with the package compare_equal or, also, importing the module `compare_equal.compare`.
+The main module is :mod:`compare_equal.compare` which contains the two main function: 
+:func:`compare_equal.compare.compare_pdb`, for comparing the molecules inside of two PDB files,
+and :func:`compare_equal.compare.compare_mol`, for comparing two 'chimera.Molecule' objects. 
+These two function can be imported directly with the package or, also, importing 
+the module :mod:`compare_equal.compare`.
 
-Moreover, the package includes a subpackage for check the properly running of the two function, the `compare_equal.tests`. 
 """
 
 __author__ = "Andres Giner Anton"
