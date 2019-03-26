@@ -3,19 +3,21 @@ import os
 
 sys.path.insert(0, "/home/travis/miniconda/lib/python2.7/site-packages")
 
-# ESTO COMO HACERLO BIEN PARA NO CAMBIARLO PARA TRAVIS
+# I need to resolve this to not change it for travis and local use
 
 from pychimera import patch_environ, enable_chimera
 
 patch_environ()
 # enable_chimera()
 
-
-from context import compare
 import chimera
+from context import compare
 
 
 class Test_Compare(object):
+    """Class for the tests with pytest"""
+
+
     def test_pdb(self):
         """Test fot the function compare_pdb"""
 
@@ -27,16 +29,16 @@ class Test_Compare(object):
         """Test fot the function compare_mol"""
 
         path = os.path.dirname(os.path.abspath(__file__))
-        mol1 = chimera.openModels.open(os.path.join(path, "data/mol1.pdb"), type="PDB")[
-            0
-        ]
-        mol2 = chimera.openModels.open(os.path.join(path, "data/mol2.pdb"), type="PDB")[
-            0
-        ]
-        mol3 = chimera.openModels.open(os.path.join(path, "data/mol3.pdb"), type="PDB")[
-            0
-        ]
+        mol_1 = chimera.openModels.open(
+            os.path.join(path, "data/mol1.pdb"), type="PDB"
+        )[0]
+        mol_2 = chimera.openModels.open(
+            os.path.join(path, "data/mol2.pdb"), type="PDB"
+        )[0]
+        mol_3 = chimera.openModels.open(
+            os.path.join(path, "data/mol3.pdb"), type="PDB"
+        )[0]
 
-        assert compare.compare_mol(mol1, mol2)
-        assert not compare.compare_mol(mol1, mol3)
-        assert not compare.compare_mol(mol2, mol3)
+        assert compare.compare_mol(mol_1, mol_2)
+        assert not compare.compare_mol(mol_1, mol_3)
+        assert not compare.compare_mol(mol_2, mol_3)

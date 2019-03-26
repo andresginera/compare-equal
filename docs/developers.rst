@@ -26,7 +26,7 @@ Comparison of two Python variables
 Tests
 ---------------
 
-Test for Compare.Pdb
-********************
+Test for the module compare and its functions
+*********************************************
 
 .. literalinclude:: ../tests/test_class.py

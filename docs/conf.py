@@ -19,6 +19,7 @@ from mock import MagicMock
 
 
 class Mock(MagicMock):
+    
     def __getattr__(cls, name):
         if name in ("__file__", "__path__"):
             return "."

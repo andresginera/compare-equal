@@ -12,8 +12,8 @@ from chimera import match
 
 def compare_pdb(pdb_1, pdb_2):
     """
-    Recieves the name (or path) of two PDB files and checks if the two molecules of both 
-    PDB files are equals, in which case, it will return a True value.
+    Receives the name (or path) of two PDB files and checks if both molecules are
+    equals, in which case, it will return a True value.
 
     Parameters
     ----------
@@ -23,7 +23,7 @@ def compare_pdb(pdb_1, pdb_2):
     Returns
     -------
     bool
-        A True or False value depending if both PDB are equal or not.
+        A True or False value depending if both PDB files are equal or not.
 
     """
 
@@ -44,7 +44,7 @@ def compare_pdb(pdb_1, pdb_2):
 
 def compare_mol(mol_1, mol_2):
     """
-    Recieves two 'chimera.Molecule' objects and checks if both are equals, in which case,
+    Receives two 'chimera.Molecule' objects and checks if both are equals, in which case,
     it will return a True value.
 
     Parameters

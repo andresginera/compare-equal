@@ -7,7 +7,9 @@ First steps
 How to install
 ------------------
 
-For the installation, firstly you will need to install UCSF Chimera. Download the `latest vesion  <http://www.cgl.ucsf.edu/chimera/download.html>`_ and install it with the next command:
+For the installation, firstly you will need to install UCSF Chimera. 
+Download the `latest vesion  <http://www.cgl.ucsf.edu/chimera/download.html>`_ 
+and install it with the next command:
 
 .. code-block:: console
 
@@ -37,7 +39,9 @@ How to use it
 
 Compare Equal package is intended to be used in Python scripts that are going
 to be run inside of Chimera or in the command line with the ``chimera --nogui``
-command. The functions are stored in the module ``compare`` inside of the
+command.
+
+The functions are stored in the module ``compare`` inside of the
 ``compare_equal`` package. However, you can call these functions importing only
 the package without the module:
 
@@ -49,38 +53,17 @@ the package without the module:
 
     # Without importing the module explicitly
     >>> import compare_equal
-    >>> compare_equal.CompareMol(test_1,test_2)
+    >>> compare_equal.CompareMol(test_1, test_2)
     True
 
     # Importing the module inside the package explicitly
     >>> from compare_equal import compare
-    >>> compare.CompareMol(test_1,test_2)
+    >>> compare.CompareMol(test_1, test_2)
     True
 
     # Additionally, you can import only the function that you want
     >>> from compare_equal.compare import CompareMol
-    >>> CompareMol(test_1,test_2)
+    >>> CompareMol(test_1, test_2)
     True
 
 You can use it also interactively within the Interpreter of `PyChimera <https://pychimera.readthedocs.io/en/latest/>`_.
-
------
-Tests
------
-
-This package, has also a subpackage ``tests`` with two tests to check if both
-functions run as intended. You can run both tests with Chimera in the command line:
-
-.. code-block:: console
-
-    $ chimera --nogui --silent --script <(echo "import compare_equal.tests.mol_test")
-    $ chimera --nogui --silent --script <(echo "import compare_equal.tests.pdb_test")
-
-Alternatively, you can run the tests with PyChimera in a simpler way:
-
-.. code-block:: console
-
-    $ pychimera -m compare_equal.tests.mol_test
-    $ pychimera -m compare_equal.tests.pdb_test
-
-Both tests are expected to produce no output.
