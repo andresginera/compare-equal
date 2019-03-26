@@ -5,4 +5,3 @@ if [[ ! -e $HOME/chimera/bin/chimera ]]
 then
     bash install_chimera.sh
 fi
-export CHIMERADIR="$HOME/chimera"
