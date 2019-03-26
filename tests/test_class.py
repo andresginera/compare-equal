@@ -7,7 +7,7 @@ sys.path.insert(0, "/home/travis/miniconda/lib/python2.7/site-packages")
 
 from pychimera import patch_environ, enable_chimera
 
-patch_environ(nogui=True)
+patch_environ()
 # enable_chimera()
 
 
