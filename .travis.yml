@@ -12,6 +12,7 @@ before_install:
   - devtools/travis-ci/miniconda.sh
 install:
   # Install Pychimera
+  - $HOME/miniconda/bin/conda config --set always_yes yes
   - $HOME/miniconda/bin/conda install -c insilichem pychimera
   # Install package
   - pip install -i https://test.pypi.org/simple/ compare-equal
