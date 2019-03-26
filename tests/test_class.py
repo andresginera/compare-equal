@@ -17,6 +17,8 @@ import chimera
 
 class Test_Compare(object):
     def test_pdb(self):
+        """Test fot the function compare_pdb"""
+
         assert compare.compare_pdb("tests/data/mol1", "tests/data/mol2")
         assert not compare.compare_pdb("tests/data/mol1", "tests/data/mol3")
         assert not compare.compare_pdb("tests/data/mol2", "tests/data/mol3")
