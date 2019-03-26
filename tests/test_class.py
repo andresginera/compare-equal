@@ -1,7 +1,9 @@
 import sys
 import os
 
-sys.path.insert(0, "/opt/miniconda2/lib/python2.7/site-packages/")
+sys.path.insert(0, "$HOME/miniconda/lib/python2.7/site-packages/")
+
+# ESTO COMO HACERLO BIEN PARA NO CAMBIARLO PARA TRAVIS
 
 from pychimera import patch_environ, enable_chimera
 
