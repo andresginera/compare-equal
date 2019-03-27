@@ -8,16 +8,10 @@ before_install:
   - chmod +x devtools/travis-ci/miniconda.sh
   # Chimera:
   - devtools/travis-ci/chimera.sh
-  # Miniconda:
-  - devtools/travis-ci/miniconda.sh
 install:
   # Install Pychimera
-  - source $HOME/miniconda/etc/profile.d/conda.sh
-  - conda activate
-  - $HOME/miniconda/bin/conda config --set always_yes yes
-  - $HOME/miniconda/bin/conda install -c insilichem pychimera
+  - pip install pychimera
   - export CHIMERADIR="$HOME/chimera"
-  - conda install -q -n base conda conda-build
   # Install package
   - pip install -i https://test.pypi.org/simple/ compare-equal
 script:

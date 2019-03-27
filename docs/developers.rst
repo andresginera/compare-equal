@@ -29,4 +29,4 @@ Tests
 Test for the module compare and its functions
 *********************************************
 
-.. literalinclude:: ../tests/test_class.py
+.. literalinclude:: ../tests/test_compare.py
