@@ -5,7 +5,6 @@ os:
   - linux
 before_install:
   - chmod +x devtools/travis-ci/chimera.sh
-  - chmod +x devtools/travis-ci/miniconda.sh
   # Chimera:
   - devtools/travis-ci/chimera.sh
 install:
