@@ -28,7 +28,7 @@ class Mock(MagicMock):
 MOCK_MODULES = ["chimera"]
 
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
-sys.path.insert("../compare_equal")
+sys.path.insert(0, "../compare_equal")
 
 import compare_equal
 
