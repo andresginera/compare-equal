@@ -5,11 +5,22 @@ os:
   - linux
 before_install:
   - chmod +x devtools/travis-ci/chimera.sh
+  - chmod +x devtools/travis-ci/miniconda.sh
   # Chimera:
   - devtools/travis-ci/chimera.sh
+  # Miniconda:
+  - devtools/travis-ci/miniconda.sh
 install:
+  # Configure conda
+  - source $HOME/miniconda/etc/profile.d/conda.sh
+  - conda config --set always_yes yes
+  - conda config --remove-key channels || true
+  - conda config --add channels defaults
+  - conda config --add channels insilichem
+  - conda activate
+  - conda install -q conda conda-build
   # Install Pychimera
-  - pip install pychimera
+  - conda install -c insilichem pychimera
   - export CHIMERADIR="$HOME/chimera"
   # Install package
   - pip install -i https://test.pypi.org/simple/ compare-equal
