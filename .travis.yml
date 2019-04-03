@@ -19,7 +19,8 @@ install:
   - conda config --add channels insilichem
   - conda activate
   # Install Pychimera
-  - conda install -c insilichem pychimera
+  - conda create -n pychimera -c insilichem python=2.7 pychimera
+  - source activate pychimera
   - export CHIMERADIR="$HOME/chimera"
   # Install package
   - pip install -i https://test.pypi.org/simple/ compare-equal
