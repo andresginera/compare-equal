@@ -26,7 +26,23 @@ Comparison of two Python variables
 Tests
 ---------------
 
-Test for the module compare and its functions
+Path provider function
+***************************
+
+.. literalinclude:: ../tests/conftest.py
+    :language: python
+    :lines: 6-10
+
+Test for compare_pdb
 *********************************************
 
 .. literalinclude:: ../tests/test_compare.py
+    :language: python
+    :lines: 16-21
+
+Test for compare_mol
+*********************************************
+
+.. literalinclude:: ../tests/test_compare.py
+    :language: python
+    :lines: 24-33
