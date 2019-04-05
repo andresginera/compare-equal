@@ -1,13 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from pychimera import patch_environ, enable_chimera
-
-patch_environ()
-enable_chimera()
-
-import sys
-import os
 from chimera import openModels
 from compare_equal import compare
 from conftest import datapath
