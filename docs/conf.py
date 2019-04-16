@@ -19,7 +19,6 @@ from mock import MagicMock
 
 
 class Mock(MagicMock):
-    
     def __getattr__(cls, name):
         if name in ("__file__", "__path__"):
             return "."
@@ -29,11 +28,10 @@ class Mock(MagicMock):
 MOCK_MODULES = ["chimera"]
 
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
-
-sys.path.insert(0, os.path.abspath(".."))
-sys.path.insert(0, os.path.abspath("../compare_equal"))
+sys.path.insert(0, "../compare_equal")
 
 import compare_equal
+
 
 # -- Project information -----------------------------------------------------
 

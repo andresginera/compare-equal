@@ -11,15 +11,19 @@ before_install:
   # Miniconda:
   - devtools/travis-ci/miniconda.sh
 install:
-  # Install Pychimera
+  # Configure conda
   - source $HOME/miniconda/etc/profile.d/conda.sh
+  - conda config --set always_yes yes
+  - conda config --remove-key channels || true
+  - conda config --add channels defaults
+  - conda config --add channels insilichem
   - conda activate
-  - $HOME/miniconda/bin/conda config --set always_yes yes
-  - $HOME/miniconda/bin/conda install -c insilichem pychimera
+  # Install Pychimera and Pytest
+  - conda install -c insilichem pychimera pytest
   - export CHIMERADIR="$HOME/chimera"
-  - conda install -q -n base conda conda-build
   # Install package
   - pip install -i https://test.pypi.org/simple/ compare-equal
 script:
   # Check package
-  - pytest -s
+  - cd tests
+  - python run_test.py
